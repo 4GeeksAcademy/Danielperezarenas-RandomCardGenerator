@@ -7,10 +7,12 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  
-  let cardsType = ['♦', '♥', '♠', '♣']
-  let cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
 
+ // Variables 
+  let cardsType = ['♦', '♥', '♠', '♣']
+  let cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K"]
+
+  // Funcion obtener pinta
   function getTypeOfCard() {
     let typeIndex = Math.floor(Math.random() * cardsType.length);
     let randomType = cardsType[typeIndex];
@@ -28,6 +30,7 @@ window.onload = function() {
   }
   getTypeOfCard();
   
+// Funcion obtener número de carta
   function getCard() {
     let cardsIndex = Math.floor(Math.random() * cards.length);
     let randomCard = cards[cardsIndex];
@@ -42,7 +45,9 @@ window.onload = function() {
     getCard();
   }
 
+// Botón random generator
   document.querySelector(".btn").addEventListener("click", getRandomCard);
 
+// Timer
   setInterval(getRandomCard, 10000);
 }
