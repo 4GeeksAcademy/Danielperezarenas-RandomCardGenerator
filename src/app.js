@@ -43,4 +43,6 @@ window.onload = function() {
   }
 
   document.querySelector(".btn").addEventListener("click", getRandomCard);
+
+  setInterval(getRandomCard, 10000);
 }
